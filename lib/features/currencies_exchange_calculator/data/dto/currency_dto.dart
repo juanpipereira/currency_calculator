@@ -4,12 +4,14 @@ class CurrencyDto {
   const CurrencyDto({
     required this.id,
     required this.name,
+    required this.symbol,
     required this.type,
     required this.iconPath,
   });
 
   final String id;
   final String name;
+  final String symbol;
   final CurrencyType type;
   final String iconPath;
 
@@ -17,6 +19,7 @@ class CurrencyDto {
     return CurrencyDto(
       id: json['id'],
       name: json['name'],
+      symbol: json['symbol'],
       type: CurrencyType.values.byName(json['type']),
       iconPath: json['iconPath'],
     );
@@ -26,6 +29,7 @@ class CurrencyDto {
     return {
       'id': id,
       'name': name,
+      'symbol': symbol,
       'type': type.name,
       'iconPath': iconPath,
     };

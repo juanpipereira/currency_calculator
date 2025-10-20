@@ -6,6 +6,7 @@ extension CurrencyMapper on CurrencyDto {
     return Currency(
       id: id,
       name: name,
+      symbol: symbol,
       type: type,
       iconPath: iconPath,
     );

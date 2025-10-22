@@ -6,7 +6,7 @@ class GetCurrenciesUseCase {
 
   const GetCurrenciesUseCase({required this.repository});
 
-  Future<List<Currency>> execute() async {
-    return await repository.getCurrencies();
+  Future<List<Currency>> execute(String type) async {
+    return repository.getCurrencies(type);
   }
 }

@@ -1,5 +1,6 @@
 import 'package:currency_calculator/features/currencies_exchange_calculator/data/dto/currency_dto.dart';
 import 'package:currency_calculator/features/currencies_exchange_calculator/domain/entity/currency.dart';
+import 'package:currency_calculator/features/currencies_exchange_calculator/domain/entity/currency_type.dart';
 
 extension CurrencyMapper on CurrencyDto {
   Currency toEntity() {
@@ -7,7 +8,7 @@ extension CurrencyMapper on CurrencyDto {
       id: id,
       name: name,
       symbol: symbol,
-      type: type,
+      type: CurrencyType.values.byName(type),
       iconPath: iconPath,
     );
   }

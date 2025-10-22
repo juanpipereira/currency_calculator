@@ -1,4 +1,4 @@
-import 'package:currency_calculator/features/currencies_exchange_calculator/presentation/pages/calculator_page.dart';
+import 'package:currency_calculator/features/currencies_exchange_calculator/presentation/screen/calculator_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

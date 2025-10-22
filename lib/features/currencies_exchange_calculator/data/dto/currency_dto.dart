@@ -1,5 +1,3 @@
-import 'package:currency_calculator/features/currencies_exchange_calculator/domain/entity/currency_type.dart';
-
 class CurrencyDto {
   const CurrencyDto({
     required this.id,
@@ -12,7 +10,7 @@ class CurrencyDto {
   final String id;
   final String name;
   final String symbol;
-  final CurrencyType type;
+  final String type;
   final String iconPath;
 
   factory CurrencyDto.fromJson(Map<String, dynamic> json) {
@@ -20,7 +18,7 @@ class CurrencyDto {
       id: json['id'],
       name: json['name'],
       symbol: json['symbol'],
-      type: CurrencyType.values.byName(json['type']),
+      type: json['type'],
       iconPath: json['iconPath'],
     );
   }
@@ -30,7 +28,7 @@ class CurrencyDto {
       'id': id,
       'name': name,
       'symbol': symbol,
-      'type': type.name,
+      'type': type,
       'iconPath': iconPath,
     };
   }

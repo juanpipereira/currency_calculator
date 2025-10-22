@@ -9,8 +9,8 @@ class CurrenciesRepository implements ICurrenciesRepository {
   final ICurrenciesDataSource dataSource;
 
   @override
-  Future<List<Currency>> getCurrencies() async {
-    final currencyDtos = await dataSource.getCurrencies();
+  Future<List<Currency>> getCurrencies(String type) async {
+    final currencyDtos = await dataSource.getCurrencies(type);
     final currencies = currencyDtos.map((dto) => dto.toEntity()).toList();
     return currencies;
   }

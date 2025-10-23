@@ -4,7 +4,7 @@ import 'package:currency_calculator/features/currencies_exchange_calculator/doma
 import 'package:currency_calculator/features/currencies_exchange_calculator/domain/repository/i_currencies_repository.dart';
 
 class CurrenciesRepository implements ICurrenciesRepository {
-  const CurrenciesRepository({required this.dataSource});
+  const CurrenciesRepository(this.dataSource);
 
   final ICurrenciesDataSource dataSource;
 

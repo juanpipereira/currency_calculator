@@ -25,7 +25,7 @@ final currenciesDataSourceProvider = Provider<ICurrenciesDataSource>.internal(
 // ignore: unused_element
 typedef CurrenciesDataSourceRef = ProviderRef<ICurrenciesDataSource>;
 String _$currenciesRepositoryHash() =>
-    r'de6c24cf3b4c3f1fa75ec2ba7629a3045e2ce0b8';
+    r'74de884f0e8e4b44d7c63d92056e7970b1e39be0';
 
 /// See also [currenciesRepository].
 @ProviderFor(currenciesRepository)
@@ -43,7 +43,7 @@ final currenciesRepositoryProvider = Provider<ICurrenciesRepository>.internal(
 // ignore: unused_element
 typedef CurrenciesRepositoryRef = ProviderRef<ICurrenciesRepository>;
 String _$getCurrenciesUseCaseHash() =>
-    r'7e23d573cb2786e6ead9598741467031511411f5';
+    r'96498e0ebbe84d6fd7f6a4d1d26cc1c6e050cabb';
 
 /// See also [getCurrenciesUseCase].
 @ProviderFor(getCurrenciesUseCase)
@@ -60,5 +60,85 @@ final getCurrenciesUseCaseProvider = Provider<GetCurrenciesUseCase>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef GetCurrenciesUseCaseRef = ProviderRef<GetCurrenciesUseCase>;
+String _$currencyExchangeCalculationServiceHash() =>
+    r'f1833e89593db4410b8a0522d30f09c2afd24df0';
+
+/// See also [currencyExchangeCalculationService].
+@ProviderFor(currencyExchangeCalculationService)
+final currencyExchangeCalculationServiceProvider =
+    Provider<ICurrencyExchangeCalculationService>.internal(
+  currencyExchangeCalculationService,
+  name: r'currencyExchangeCalculationServiceProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$currencyExchangeCalculationServiceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef CurrencyExchangeCalculationServiceRef
+    = ProviderRef<ICurrencyExchangeCalculationService>;
+String _$currencyExchangeCalculationDataSourceHash() =>
+    r'2a61ea83249b8d091b3e6cf28cc172d9ea98b53e';
+
+/// See also [currencyExchangeCalculationDataSource].
+@ProviderFor(currencyExchangeCalculationDataSource)
+final currencyExchangeCalculationDataSourceProvider =
+    Provider<ICurrencyExchangeCalculationDataSource>.internal(
+  currencyExchangeCalculationDataSource,
+  name: r'currencyExchangeCalculationDataSourceProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$currencyExchangeCalculationDataSourceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef CurrencyExchangeCalculationDataSourceRef
+    = ProviderRef<ICurrencyExchangeCalculationDataSource>;
+String _$currencyExchangeCalculationRepositoryHash() =>
+    r'883a69bcc314b3fa5a575a453b8aa1655fa64ff8';
+
+/// See also [currencyExchangeCalculationRepository].
+@ProviderFor(currencyExchangeCalculationRepository)
+final currencyExchangeCalculationRepositoryProvider =
+    Provider<ICurrencyExchangeCalculationRepository>.internal(
+  currencyExchangeCalculationRepository,
+  name: r'currencyExchangeCalculationRepositoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$currencyExchangeCalculationRepositoryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef CurrencyExchangeCalculationRepositoryRef
+    = ProviderRef<ICurrencyExchangeCalculationRepository>;
+String _$getCurrencyExchangeCalculationUseCaseHash() =>
+    r'6912b7653d2dd999252504c9254eb7ab1302868b';
+
+/// See also [getCurrencyExchangeCalculationUseCase].
+@ProviderFor(getCurrencyExchangeCalculationUseCase)
+final getCurrencyExchangeCalculationUseCaseProvider =
+    Provider<GetCurrencyExchangeCalculationUseCase>.internal(
+  getCurrencyExchangeCalculationUseCase,
+  name: r'getCurrencyExchangeCalculationUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$getCurrencyExchangeCalculationUseCaseHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef GetCurrencyExchangeCalculationUseCaseRef
+    = ProviderRef<GetCurrencyExchangeCalculationUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

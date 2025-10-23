@@ -4,7 +4,7 @@ import 'package:currency_calculator/features/currencies_exchange_calculator/doma
 class GetCurrenciesUseCase {
   final ICurrenciesRepository repository;
 
-  const GetCurrenciesUseCase({required this.repository});
+  const GetCurrenciesUseCase(this.repository);
 
   Future<List<Currency>> execute(String type) async {
     return repository.getCurrencies(type);

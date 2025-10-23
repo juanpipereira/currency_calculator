@@ -7,7 +7,7 @@ class CurrenciesLocalDataSource implements ICurrenciesDataSource {
   @override
   Future<List<CurrencyDto>> getCurrencies(String type) async {
     // Added for demo purposes
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(milliseconds: 500));
     const currencies = [
       CurrencyDto(
         id: 'BRL',

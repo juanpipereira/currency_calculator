@@ -1,42 +1,48 @@
-# Bienvenido al coding-interview-frontend
+# Currency Calculator
 
-## Descripción
-Acá tienes todos los assets que necesitas para llevar a cabo una pequeña prueba técnica. El objetivo es que puedas demostrar tus habilidades de programación y de UI. El proyecto consiste de una pequeña calculadora que te muestra cuanto vas a recibir si quieres cambiar una determinada cantidad de una moneda a otra.
+A simple and intuitive currency exchange calculator application built with Flutter. This app allows users to convert between various FIAT and Crypto currencies, providing real-time exchange rates.
 
-## Características
-1. Hay dos tipos de monedas: "FIAT" y "CRYPTO".
-2. La tasa de cambio la podrás obtener de nuestro API público.
-3. La moneda del input 
+## Features
+- Convert between FIAT and CRYPTO currencies.
+- Fetches real-time exchange rates from a public API.
+- User-friendly interface.
+
+## Getting Started
+
+### Prerequisites
+- Flutter SDK installed.
+- A code editor like VS Code or Android Studio.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/juanpipereira/currency_calculator.git
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Run the app:**
+    ```bash
+    flutter run
+    ```
+
+## Tools and Technologies Used
+-   **Flutter** 
+-   **Riverpod:** A robust and testable state-management solution for Flutter applications.
+-   **Riverpod Generator:** Code generator for Riverpod.
+-   **http:** Library for making HTTP requests.
 
 ## API
-- URL: https://74j6q7lg6a.execute-api.eu-west-1.amazonaws.com/stage/orderbook/public/recommendations
-- Query Params:
-  - `type`: 0 -> Cambio de CRYPTO a FIAT, 1 -> Cambio de FIAT a CRYPTO
-  - `cryptoCurrencyId`: La moneda crypto (el ID está en el nombre del asset)
-  - `fiatCurrencyId`: La moneda fiat (el ID está en el nombre del asset)
-  - `amount`: Cantidad a cambiar
-  - `amountCurrencyId`: La moneda en la que está del input
+-   **URL:** `https://74j6q7lg6a.execute-api.eu-west-1.amazonaws.com/stage/orderbook/public/recommendations`
+-   **Query Parameters:**
+    -   `type`: `0` for CRYPTO to FIAT, `1` for FIAT to CRYPTO
+    -   `cryptoCurrencyId`: The ID of the cryptocurrency
+    -   `fiatCurrencyId`: The ID of the fiat currency
+    -   `amount`: The amount to exchange
+    -   `amountCurrencyId`: The ID of the input currency
 
-Del response, simplemente obtener el `data.byPrice.fiatToCryptoExchangeRate` y multiplicarlo/dividirlo para mostrar toda la data necesaria.
-
-### Que puedes hacer: 
-- ✅ Preferiblemente, usa Flutter :)
-- ✅ Cuantas mejoras de UX como veas necesarias/quieras
-- ✅ No todo tiene que estar funcionando a la perfección, lo que más vamos a tomar en cuenta es el parecido con el diseño y la calidad del código.
-- ✅ Desarrolla la app con la arquitecura de una app que va a escalar, no hagas un código que no puedas mantener en el futuro.
-
-
-### Que **no** puedes hacer:
-- ❌ Estresarte 🤗
-
-
-## Pasos para comenzar
-1. Haz un fork usando este repositorio como template
-2. Clona el repositorio en tu máquina
-3. Desarrolla la mini-app
-4. Sube tus cambios a tu repositorio
-5. Avísanos que has terminado
-6. ???
-7. PROFIT
-
-### Cualquier duda contactarme a https://www.linkedin.com/in/carlosfontest/
+The exchange rate can be obtained from `data.byPrice.fiatToCryptoExchangeRate` in the API response.

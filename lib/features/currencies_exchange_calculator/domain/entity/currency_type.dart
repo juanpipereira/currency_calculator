@@ -1,4 +1,8 @@
 enum CurrencyType {
-  fiat,
-  crypto,
+  fiat('FIAT'),
+  crypto('Cripto');
+
+  const CurrencyType(this.heading);
+
+  final String heading;
 }

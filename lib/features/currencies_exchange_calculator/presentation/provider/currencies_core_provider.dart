@@ -1,5 +1,4 @@
 import 'package:currency_calculator/features/currencies_exchange_calculator/data/data_source/currencies_local_data_source.dart';
-import 'package:currency_calculator/features/currencies_exchange_calculator/data/data_source/currency_exchange_calculation_local_data_source.dart';
 import 'package:currency_calculator/features/currencies_exchange_calculator/data/data_source/currency_exchange_calculation_remote_data_source.dart';
 import 'package:currency_calculator/features/currencies_exchange_calculator/data/data_source/i_currencies_data_source.dart';
 import 'package:currency_calculator/features/currencies_exchange_calculator/data/data_source/i_currency_exchange_calculation_data_source.dart';
@@ -40,8 +39,6 @@ ICurrencyExchangeCalculationService currencyExchangeCalculationService(
 @Riverpod(keepAlive: true)
 ICurrencyExchangeCalculationDataSource currencyExchangeCalculationDataSource(
     Ref ref) {
-  // For demo purposes, we can switch between local and remote data sources here.
-  // return CurrencyExchangeCalculationLocalDataSource();
   return CurrencyExchangeCalculationRemoteDataSource(
       ref.read(currencyExchangeCalculationServiceProvider));
 }

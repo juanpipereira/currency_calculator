@@ -7,12 +7,24 @@ extension CurrencyExchangeCalculationLogic on CurrencyExchangeCalculation? {
   }) {
     if (this != null) {
       if (isFiatToCrypto) {
-        return '${amount * this!.fiatToCryptoExchangeRate}';
-      } else {
         return '${amount * 1 / this!.fiatToCryptoExchangeRate}';
+      } else {
+        return '${amount * this!.fiatToCryptoExchangeRate}';
       }
     } else {
       return '--';
+    }
+  }
+
+  String calculateExchangeRate({
+    required bool isFiatToCrypto,
+  }) {
+    if (this != null) {
+      return isFiatToCrypto
+          ? '${(1 / this!.fiatToCryptoExchangeRate)}'
+          : '${this!.fiatToCryptoExchangeRate}';
+    } else {
+      return '';
     }
   }
 }

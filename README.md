@@ -7,6 +7,14 @@ A simple and intuitive currency exchange calculator application built with Flutt
 - Fetches real-time exchange rates from a public API.
 - User-friendly interface.
 
+## Demo
+|Demo video|
+|-|
+|<video src="https://github.com/user-attachments/assets/3e1642d5-325b-4f57-bff3-81dc9c8eef63">|
+
+
+
+
 ## Getting Started
 
 ### Prerequisites

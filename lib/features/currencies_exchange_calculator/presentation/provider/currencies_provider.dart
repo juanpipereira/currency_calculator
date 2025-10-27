@@ -8,6 +8,7 @@ part 'currencies_provider.g.dart';
 class Currencies extends _$Currencies {
   @override
   Future<List<Currency>> build(String currencyType) async {
+    ref.keepAlive(); // Makes the provider cache its state after called once
     return await ref.watch(getCurrenciesUseCaseProvider).execute(currencyType);
   }
 }
